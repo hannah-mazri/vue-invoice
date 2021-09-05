@@ -216,10 +216,29 @@ export default {
       invoiceTotal: 0,
     };
   },
+  created() {
+    // get current date for invoice date field
+    this.invoiceDateUnix = Date.now();
+    this.invoiceDate = new Date(this.invoiceDateUnix).toLocaleDateString(
+      'en-us',
+      this.dateOptions
+    );
+  },
   methods: {
     ...mapMutations(['TOGGLE_INVOICE']),
     closeInvoice() {
       this.TOGGLE_INVOICE();
+    },
+  },
+  watch: {
+    paymentTerms() {
+      const futureDate = new Date();
+      this.paymentDueDateUnix = futureDate.setDate(
+        futureDate.getDate() + parseInt(this.paymentTerms)
+      );
+      this.paymentDueDate = new Date(
+        this.paymentDueDateUnix
+      ).toLocaleDateString('en-us', this.dateOptions);
     },
   },
 };
