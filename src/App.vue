@@ -34,7 +34,7 @@ export default {
     Modal,
   },
   created() {
-    // this.GET_INVOICES();
+    this.GET_INVOICES();
     this.checkScreen();
     window.addEventListener('resize', this.checkScreen);
   },
