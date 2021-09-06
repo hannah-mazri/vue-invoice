@@ -1,4 +1,9 @@
-# invoice
+# vue-invoice
+
+Build with:
+- Vue 3
+- Vuex
+- Firebase
 
 ## Project setup
 ```
