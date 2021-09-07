@@ -4,7 +4,10 @@
     <div class="header flex">
       <div class="left flex flex-column">
         <h1>Invoices</h1>
-        <span>There are {{ invoiceData.length }} total invoices</span>
+        <span
+          >Showing {{ filteredInvoice.length }} of
+          {{ invoiceData.length }} total invoices</span
+        >
       </div>
       <div class="right flex">
         <div @click="toggleFilterMenu" class="filter flex">
