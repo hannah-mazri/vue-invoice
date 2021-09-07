@@ -5,8 +5,8 @@
       <div class="left flex flex-column">
         <h1>Invoices</h1>
         <span
-          >Showing {{ filteredInvoice.length }} of
-          {{ invoiceData.length }} total invoices</span
+          >Showing {{ filteredData.length }} of {{ invoiceData.length }} total
+          invoices</span
         >
       </div>
       <div class="right flex">
